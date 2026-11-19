@@ -410,6 +410,8 @@ class UiStore {
       this.secondaryRightSidebar = panel;
     } else {
       this.rightSidebar = panel;
+      // The primary panel is persisted, so save it or a reload restores a stale panel.
+      this.persist();
     }
   };
 
